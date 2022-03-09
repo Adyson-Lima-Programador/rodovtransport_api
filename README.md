@@ -1,5 +1,7 @@
 # API REST "rodovtransport", desenvolvida em Ruby on Rails, com acesso JWT. 
 
+![GitHub](https://img.shields.io/github/license/Adyson-Lima-Programador/rodovtransport_api?style=for-the-badge)
+
 ## Autor
 
 Adyson Lima
