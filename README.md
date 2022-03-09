@@ -1,24 +1,46 @@
-# README
+# API REST "rodovtransport", desenvolvida em Ruby on Rails, com acesso JWT. 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Autor
 
-Things you may want to cover:
+Adyson Lima
 
-* Ruby version
+Meu LinkedIn: https://www.linkedin.com/in/adyson-lima-programador/
 
-* System dependencies
+# Sobre a API
 
-* Configuration
+https://endereço em breve.com
 
-* Database creation
+Esta API REST é desenvolvida em **Ruby on Rails**, usando **TDD**, e **JWT** para autenticação. Ela provê recursos para dois frontends, um web, desenvolvido em **Angular** e outro, mobile, desenvolvido em **Flutter**. Esta API é parte de uma aplicação FullStack para gerenciamento de cargas para transportadoras rodoviárias.
 
-* Database initialization
+# Tecnologias utilizadas
 
-* How to run the test suite
+- Ruby
+- Ruby on Rails
+- JWT
+- Postgresql
 
-* Services (job queues, cache servers, search engines, etc.)
+## Implantação em produção
+- Back end: servidor Linux VPS Locaweb
+- Banco de dados: Postgresql
 
-* Deployment instructions
+# Como executar o projeto
 
-* ...
+## API
+Pré-requisitos: 
+- Ruby 3
+- Ruby on Rails 7
+
+```bash
+# clonar repositório
+git clone git@github.com:Adyson-Lima-Programador/rodovtransport_api.git
+
+# entrar na pasta rodovtransport
+cd rodovtransport
+
+# instalar dependencias com bundle
+bundle
+
+# executar o projeto
+rails s
+```
+
