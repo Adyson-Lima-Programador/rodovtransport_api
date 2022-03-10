@@ -5,13 +5,12 @@
 ## Imagem da documentação da API 
 <img src="https://github.com/Adyson-Lima-Programador/rodovtransport_api/blob/main/documentacao/imagem-doc-api.png" width="100%" height="100%"/>
 
-# Autor: Adyson Lima
-
-<a href="https://www.linkedin.com/in/adyson-lima-programador/"><h1>Meu LinkedIn</h1><a>
+# Autor: Adyson Lima 
+<a href="https://www.linkedin.com/in/adyson-lima-programador/"><strong>Meu LinkedIn</strong><a>
  
 
 # Sobre a API
-## <a target="_blanc" href="https://github.com/Adyson-Lima-Programador/rodovtransport_api/blob/main/documentacao/index.html">Documentação da API <a>
+## A documentação completa está na pasta rodovtransport_api/documentacao/index.html
 
 ## Endereço da API
 <a href="https://endereço em breve.com">Endereço da API em breve aqui ;)</a>
