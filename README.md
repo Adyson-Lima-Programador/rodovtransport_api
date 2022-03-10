@@ -2,6 +2,9 @@
 
 ![GitHub](https://img.shields.io/github/license/Adyson-Lima-Programador/rodovtransport_api?style=for-the-badge)
 
+## Imagem da documentação da API
+<img src="https://github.com/Adyson-Lima-Programador/rodovtransport_api/blob/main/documentacao/imagem-doc-api.png" width="100%" height="100%"/>
+
 ## Autor
 
 Adyson Lima
