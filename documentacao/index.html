@@ -698,7 +698,7 @@ margin-bottom: 20px;
     var defs = {}
         defs["Error"] = {"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"}}};
         defs["Package"] = {"type":"object","required":["content","status"],"properties":{"id":{"type":"integer","description":"Código do pacote"},"content":{"type":"string","description":"Descrição do conteúdo do pacote"},"status":{"type":"string","description":"Status do pacote"}}};
-        defs["User"] = {"type":"object","required":["email","name","password","type"],"properties":{"id":{"type":"integer","description":"Código do usuário"},"email":{"type":"string","description":"Email do usuário"},"name":{"type":"string","description":"Nome do usuário"},"password":{"type":"string","description":"Senha do usuário"},"type":{"type":"string","description":"Tipo de usuário"}}};
+        defs["User"] = {"type":"object","required":["category","email","name","password"],"properties":{"id":{"type":"integer","description":"Código do usuário"},"email":{"type":"string","description":"Email do usuário"},"name":{"type":"string","description":"Nome do usuário"},"password":{"type":"string","description":"Senha do usuário"},"category":{"type":"string","description":"Tipo de usuário"}}};
   </script>
 
   <div class="container-fluid">
