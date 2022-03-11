@@ -9,15 +9,6 @@ gem "rails", "~> 7.0.2", ">= 7.0.2.3"
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
 
-# Build JSON APIs with ease [https://github.com/rails/jbuilder]
-# gem "jbuilder"
-
-# Use Redis adapter to run Action Cable in production
-# gem "redis", "~> 4.0"
-
-# Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
-# gem "kredis"
-
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 gem "bcrypt", "~> 3.1.7"
 
@@ -39,6 +30,12 @@ gem 'faker'
 # autenticação JWT
 gem 'jwt'
 
+# kaminari para paginação
+gem 'kaminari'
+  
+# rack-attack para restringir numero de requisições
+gem 'rack-attack'
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
@@ -48,6 +45,10 @@ group :development, :test do
   
   # rspec-rails para tdd
   gem "rspec-rails"
+  
+  # rspec spectations para tdd API
+  gem 'rspec-json_expectations'
+
 end
 
 group :development do
