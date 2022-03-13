@@ -13,4 +13,18 @@ RSpec.describe "Users", type: :request do
     end
     
   end
+  
+  describe "GET /users/{id}" do
+    
+    it "Consegue listar um usuário especifico -> status 200 ok" do
+      get user_path"1"
+      expect(response.body).to include_json(
+        id: @users[0].id,
+        name: @users[0].name,
+        email: @users[0].email)
+      expect(response).to have_http_status(200)
+    end
+    
+  end
+  
 end
