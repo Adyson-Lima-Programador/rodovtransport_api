@@ -27,4 +27,19 @@ RSpec.describe "Users", type: :request do
     
   end
   
+  describe "POST /users" do
+    
+    it "Consegue criar um usuário -> status 201 created" do
+      headers = {"ACCEPT" => "application/json"}
+      user_params = attributes_for(:user)
+      post users_path, params: {user: user_params}, headers: headers
+      expect(response.body).to include_json(
+        id: /\d/,
+        name: user_params.fetch(:name),
+        email: user_params.fetch(:email))
+        expect(response).to have_http_status(201)
+    end
+    
+  end
+  
 end
