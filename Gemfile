@@ -48,6 +48,9 @@ group :development, :test do
   
   # rspec spectations para tdd API
   gem 'rspec-json_expectations'
+  
+  # fabrica de objetos para tdd
+  gem 'factory_bot_rails'
 
 end
 
