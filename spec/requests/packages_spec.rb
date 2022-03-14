@@ -42,7 +42,6 @@ RSpec.describe "Packages", type: :request do
     
   end
   
-<<<<<<< HEAD
   describe "PATCH /packages/{id}" do
     
     it "Consegue atualizar um pacote -> status 200 ok" do
@@ -58,6 +57,15 @@ RSpec.describe "Packages", type: :request do
     
   end
   
-=======
->>>>>>> 5fd2e334ee531705bd14a998c513037a067d95e6
+  describe "DELETE /packages/{id}" do
+    
+    it "Consegue apagar um pacote -> status 204 no content" do
+      headers = {"ACCEPT" => "application/json"}
+      package = Package.first
+      expect {delete "/packages/#{package.id}.json", headers: headers}.to change(Package, :count).by(-1)
+      expect(response).to have_http_status(204)
+    end
+    
+  end
+  
 end

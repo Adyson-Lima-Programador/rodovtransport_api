@@ -25,7 +25,6 @@ class PackagesController < ApplicationController
     end
   end
   
-<<<<<<< HEAD
   # PATCH/PUT /packages/1
   def update
     if @package.update(package_params)
@@ -35,8 +34,11 @@ class PackagesController < ApplicationController
     end
   end
   
-=======
->>>>>>> 5fd2e334ee531705bd14a998c513037a067d95e6
+  # DELETE /packages/1
+  def destroy
+    @package.destroy
+  end
+  
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_package
