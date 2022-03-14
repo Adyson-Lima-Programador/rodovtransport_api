@@ -25,6 +25,15 @@ class PackagesController < ApplicationController
     end
   end
   
+  # PATCH/PUT /packages/1
+  def update
+    if @package.update(package_params)
+      render json: @package
+    else
+      render json: @package.errors, status: :unprocessable_entity
+    end
+  end
+  
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_package

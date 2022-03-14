@@ -42,4 +42,19 @@ RSpec.describe "Packages", type: :request do
     
   end
   
+  describe "PATCH /packages/{id}" do
+    
+    it "Consegue atualizar um pacote -> status 200 ok" do
+      headers = {"ACCEPT" => "application/json"}
+      package = Package.first
+      package.content += " - Atualizado" # mesmo primeiro package com content atualizado
+      patch "/packages/#{package.id}.json", params: {package: package.attributes}, headers: headers
+      expect(response.body).to include_json(
+        id: /\d/,
+        content: package.content,) 
+      expect(response).to have_http_status(200)
+    end
+    
+  end
+  
 end
