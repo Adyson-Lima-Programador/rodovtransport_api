@@ -1,23 +1,28 @@
 class PackagesController < ApplicationController
   
-  before_action :set_user, only: %i[ show update destroy ]
+  before_action :set_package, only: %i[ show update destroy ]
   
-  # GET /users
+  # GET /packages
   def index
-    @users = User.all
+    @packages = Package.all
     
-    render json: @users
+    render json: @packages
+  end
+  
+  # GET /packages/{id}
+  def show
+    render json: @package
   end
   
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_user
-      @user = User.find(params[:id])
+    def set_package
+      @package = Package.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
-    def user_params
-      params.require(:user).permit(:name, :email, :password, :category)
+    def package_params
+      params.require(:package).permit(:content, :status)
     end
   
 end
