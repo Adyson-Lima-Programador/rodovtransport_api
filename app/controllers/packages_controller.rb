@@ -14,6 +14,17 @@ class PackagesController < ApplicationController
     render json: @package
   end
   
+  #POST /packages
+  def create
+    @package = Package.new(package_params)
+    
+    if @package.save
+      render json: @package, status: :created, location: @package
+    else
+      render json: @package.errors, status: :unprocessable_entity
+    end
+  end
+  
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_package
