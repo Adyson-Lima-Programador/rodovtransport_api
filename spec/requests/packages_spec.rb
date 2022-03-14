@@ -42,6 +42,7 @@ RSpec.describe "Packages", type: :request do
     
   end
   
+<<<<<<< HEAD
   describe "PATCH /packages/{id}" do
     
     it "Consegue atualizar um pacote -> status 200 ok" do
@@ -57,4 +58,6 @@ RSpec.describe "Packages", type: :request do
     
   end
   
+=======
+>>>>>>> 5fd2e334ee531705bd14a998c513037a067d95e6
 end
