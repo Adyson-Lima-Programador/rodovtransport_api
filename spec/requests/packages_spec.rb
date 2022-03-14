@@ -27,4 +27,19 @@ RSpec.describe "Packages", type: :request do
     
   end
   
+  describe "POST /packages" do
+    
+    it "Consegue criar um pacote -> status 201 created" do
+      headers = {"ACCEPT" => "application/json"}
+      package_params = attributes_for(:package)
+      post packages_path, params: {package: package_params}, headers: headers
+      expect(response.body).to include_json(
+        id: /\d/,
+        content: package_params.fetch(:content),
+        status: package_params.fetch(:status))
+        expect(response).to have_http_status(201)
+    end
+    
+  end
+  
 end
