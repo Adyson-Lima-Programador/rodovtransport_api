@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   
   constraints subdomain: 'v1' do
     scope module: 'v1' do
+      resources :auths, only: [:create]
       resources :users
       resources :packages
     end

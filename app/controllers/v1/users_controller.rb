@@ -1,6 +1,15 @@
 module V1
   class UsersController < ApplicationController
     
+    before_action :authenticate, only: %i[ index ]
+    
+    def authenticate
+      authenticate_or_request_with_http_token do |token, options|
+      hmac_secret = '123'
+      JWT.decode token, hmac_secret, true, { algorithm: 'HS256' }
+      end
+    end
+    
     before_action :set_user, only: %i[ show update destroy ]
     
     # GET /users
