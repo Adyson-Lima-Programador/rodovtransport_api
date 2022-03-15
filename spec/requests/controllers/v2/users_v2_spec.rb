@@ -41,6 +41,15 @@ RSpec.describe V2::UsersController, type: :controller do
     
   end
   
-  
+  describe "PATCH /users/{id}" do
+    
+    it "Consegue atualizar um usuário -> status 200 ok" do
+      user = User.first
+      user.name += " - Atualizado"
+      expect { patch :update, params: { id: user.id } }
+      expect(response).to have_http_status(200)
+    end
+    
+  end
   
 end
