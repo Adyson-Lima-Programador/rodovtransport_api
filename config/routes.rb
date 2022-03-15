@@ -1,8 +1,17 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
-  resources :users
-  resources :packages
+  
+  constraints subdomain: 'v1' do
+    scope module: 'v1' do
+      resources :users
+      resources :packages
+    end
+  end
+  
+  constraints subdomain: 'v2' do
+    scope module: 'v2' do
+      resources :users
+      resources :packages
+    end
+  end
+  
 end
