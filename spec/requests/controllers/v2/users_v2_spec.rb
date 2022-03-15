@@ -52,4 +52,14 @@ RSpec.describe V2::UsersController, type: :controller do
     
   end
   
+  describe "DELETE /users/{id}" do
+    
+    it "Consegue apagar um usuário -> status 204 no content" do
+      user = User.first
+      expect { delete :destroy, params: { id: user.id } }.to change(User, :count).by(-1)
+      expect(response).to have_http_status(204)
+    end
+    
+  end
+  
 end
