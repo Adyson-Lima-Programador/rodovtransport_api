@@ -41,6 +41,17 @@ RSpec.describe V2::PackagesController, type: :controller do
     
   end
   
+  describe "PATCH /packages/{id}" do
+    
+    it "Consegue atualizar um pacote -> status 200 ok" do
+      package = Package.first
+      package.content += " - Atualizado"
+      expect { patch :update, params: { id: package.id } }
+      expect(response).to have_http_status(200)
+    end
+    
+  end
+  
   
   
 end
