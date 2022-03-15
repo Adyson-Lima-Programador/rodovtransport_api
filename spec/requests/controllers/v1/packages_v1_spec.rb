@@ -52,6 +52,14 @@ RSpec.describe V1::PackagesController, type: :controller do
     
   end
   
-  
+  describe "DELETE /packages/{id}" do
+    
+    it "Consegue apagar um pacote -> status 204 no content" do
+      package = Package.first
+      expect { delete :destroy, params: { id: package.id } }.to change(Package, :count).by(-1)
+      expect(response).to have_http_status(204)
+    end
+    
+  end
   
 end
