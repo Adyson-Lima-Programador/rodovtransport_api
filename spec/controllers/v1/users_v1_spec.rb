@@ -2,7 +2,16 @@ require 'rails_helper'
 
 RSpec.describe V1::UsersController, type: :controller do
   
-  before { @users = create_list(:user, 3) }
+  before {
+    
+    # Factory cria 3 users
+    @users = create_list(:user, 3)
+    
+    # Authorization Bearer configurada com token, pra JWT autorizar consulta GET /users
+    controller.request.env['HTTP_AUTHORIZATION'] = ActionController::HttpAuthentication::Token.
+    encode_credentials('eyJhbGciOiJIUzI1NiJ9.W3siZW1haWwiOiJhQGEuY29tIn0seyJwYXNzd29yZCI6IjEyMzQ1NiJ9XQ.TWTbhy130QuJUVRrZ8VMk6GE0j3wwea_CEH3881ui-w')
+  
+  }
   
   describe "GET /users" do
     
