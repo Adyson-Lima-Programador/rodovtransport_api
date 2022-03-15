@@ -27,4 +27,20 @@ RSpec.describe V2::UsersController, type: :controller do
     
   end
   
+  describe "POST /users" do
+    
+    it "Consegue criar um usuário -> status 201 created" do
+      user_params = attributes_for(:user)
+      post :create, params: {user: user_params}
+      expect(response.body).to include_json(
+        id: /\d/,
+        name: user_params.fetch(:name),
+        email: user_params.fetch(:email))
+        expect(response).to have_http_status(201)
+    end
+    
+  end
+  
+  
+  
 end
