@@ -1,4 +1,4 @@
-# API REST "rodovtransport", desenvolvida em Ruby on Rails, com acesso JWT. 
+# API REST "rodovtransport", desenvolvida em Ruby on Rails, com versionamento, e autenticação JWT. 
 
 ![GitHub](https://img.shields.io/github/license/Adyson-Lima-Programador/rodovtransport_api?style=for-the-badge)
 
@@ -10,12 +10,12 @@
  
 
 # Sobre a API
-## A documentação completa está na pasta rodovtransport_api/documentacao/index.html
+## A documentação completa está na pasta rodovtransport_api/documentacao
 
 ## Endereço da API
 <a href="https://endereço em breve.com">Endereço da API em breve aqui ;)</a>
 
-Esta API REST é desenvolvida em **Ruby on Rails**, usando **TDD**, e **JWT** para autenticação. Ela provê recursos para dois frontends, um web, desenvolvido em **Angular** e outro, mobile, desenvolvido em **Flutter**. Esta API é parte de uma aplicação FullStack para gerenciamento de cargas para transportadoras rodoviárias.
+Esta API REST é desenvolvida em **Ruby on Rails**, usando **TDD**, **JWT** para autenticação, e **versionamento** de recursos. Ela provê recursos para dois frontends, um web, desenvolvido em **Angular** e outro, mobile, desenvolvido em **Flutter**. Esta API é parte de uma aplicação FullStack para gerenciamento de cargas para transportadoras rodoviárias.
 
 # Tecnologias utilizadas
 
