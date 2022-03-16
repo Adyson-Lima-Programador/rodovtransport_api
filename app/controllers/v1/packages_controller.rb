@@ -48,7 +48,7 @@ module V1
   
       # Only allow a list of trusted parameters through.
       def package_params
-        params.require(:package).permit(:content, :status)
+        params.require(:package).permit(:content, :status, :user_id)
       end
     
   end

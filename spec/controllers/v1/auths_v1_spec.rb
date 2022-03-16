@@ -4,7 +4,7 @@ RSpec.describe V1::AuthsController, type: :controller do
   
   describe "POST /auths" do
     
-    it "Consegue acessar auths -> status 200 ok" do
+    it "Consegue acessar auths JWT -> status 200 ok" do
       post :create, params: { email: 'a@a.com', password: '123456' }
       expect(response.body).to include_json(
         token: "eyJhbGciOiJIUzI1NiJ9.W3siZW1haWwiOiJhQGEuY29tIn0seyJw"+
