@@ -15,13 +15,14 @@
 ## Endereço da API
 <a href="https://endereço em breve.com">Endereço da API em breve aqui ;)</a>
 
-Esta API REST é desenvolvida em **Ruby on Rails**, usando **TDD**, **JWT** para autenticação, e **versionamento** de recursos. Ela provê recursos para dois frontends, um web, desenvolvido em **Angular** e outro, mobile, desenvolvido em **Flutter**. Esta API é parte de uma aplicação FullStack para gerenciamento de cargas para transportadoras rodoviárias.
+Esta API REST é documentada com **SWAGGER** e desenvolvida com **Ruby on Rails**, **TDD**, **JWT**, e **versionamento** de recursos. Ela provê recursos para dois frontends, um web, desenvolvido em **Angular** e outro, mobile, desenvolvido em **Flutter**. Esta API é parte de uma aplicação FullStack para gerenciamento de cargas para transportadoras rodoviárias.
 
 # Tecnologias utilizadas
 
 - Ruby
 - Ruby on Rails
 - JWT
+- Swagger
 - Postgresql
 
 ## Implantação em produção
