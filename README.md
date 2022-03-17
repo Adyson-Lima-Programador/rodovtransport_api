@@ -24,7 +24,7 @@ Esta API REST é documentada com **SWAGGER** e desenvolvida com **Ruby on Rails*
 - Postgresql
 
 ## Implantação em produção
-- Back end: servidor Linux VPS Locaweb
+- Serviço: Heroku 
 - Banco de dados: Postgresql
 
 # Como executar o projeto
@@ -38,8 +38,8 @@ Pré-requisitos:
 # clonar repositório
 git clone git@github.com:Adyson-Lima-Programador/rodovtransport_api.git
 
-# entrar na pasta rodovtransport
-cd rodovtransport
+# entrar na pasta rodovtransport_api
+cd rodovtransport_api
 
 # instalar dependencias com bundle
 bundle
