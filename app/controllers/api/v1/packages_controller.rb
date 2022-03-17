@@ -1,5 +1,5 @@
-module V2
-  class PackagesController < ApplicationController
+#module V1
+  class Api::V1::PackagesController < ApplicationController
     
     before_action :set_package, only: %i[ show update destroy ]
     
@@ -20,7 +20,7 @@ module V2
       @package = Package.new(package_params)
       
       if @package.save
-        render json: @package, status: :created, location: @package
+        render json: @package, status: :created, location: api_v1_package_url(@package)
       else
         render json: @package.errors, status: :unprocessable_entity
       end
@@ -52,4 +52,4 @@ module V2
       end
     
   end
-end
+#end

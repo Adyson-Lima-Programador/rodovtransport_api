@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe V1::PackagesController, type: :controller do
+RSpec.describe Api::V1::PackagesController, type: :controller do
   
   before { @packages = create_list(:package, 3) }
   

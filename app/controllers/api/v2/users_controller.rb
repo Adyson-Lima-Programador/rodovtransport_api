@@ -1,5 +1,5 @@
-module V2
-  class UsersController < ApplicationController
+#module V2
+  class Api::V2::UsersController < ApplicationController
     
     before_action :set_user, only: %i[ show update destroy ]
     
@@ -19,7 +19,7 @@ module V2
       @user = User.new(user_params)
       
       if @user.save
-        render json: @user, status: :created, location: @user
+        render json: @user, status: :created, location: api_v2_user_url(@user)
       else
         render json: @user.errors, status: :unprocessable_entity
       end
@@ -52,4 +52,4 @@ module V2
       end  
     
   end
-end
+#end

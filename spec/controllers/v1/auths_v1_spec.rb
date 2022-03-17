@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe V1::AuthsController, type: :controller do
+RSpec.describe Api::V1::AuthsController, type: :controller do
   
   describe "POST /auths" do
     

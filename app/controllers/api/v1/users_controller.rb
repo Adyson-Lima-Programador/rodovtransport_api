@@ -1,5 +1,5 @@
-module V1
-  class UsersController < ApplicationController
+#module V1
+  class Api::V1::UsersController < ApplicationController
     
     before_action :authenticate, only: %i[ index ]
     
@@ -28,7 +28,7 @@ module V1
       @user = User.new(user_params)
       
       if @user.save
-        render json: @user, status: :created, location: @user
+        render json: @user, status: :created, location: api_v1_user_url(@user)
       else
         render json: @user.errors, status: :unprocessable_entity
       end
@@ -61,4 +61,4 @@ module V1
       end  
     
   end
-end
+#end

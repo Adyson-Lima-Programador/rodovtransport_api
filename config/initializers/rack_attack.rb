@@ -13,7 +13,7 @@ class Rack::Attack
   # restringe chamadas na url de login, com mesmo email, a 5 a cada 20 segundos
   # ajustar para rotas da API em questão
   throttle("email", limit: 11, period: 5.seconds) do |req|
-    if req.path == '/auths' && req.post?
+    if req.path == '/api/v1/auths' && req.post?
       req.params['email'].presence
     end
   end

@@ -1,5 +1,5 @@
-module V1
-  class AuthsController < ApplicationController
+# module V1
+  class Api::V1::AuthsController < ApplicationController
     
     def create
       hmac_secret = '123'
@@ -10,4 +10,4 @@ module V1
     end
     
   end
-end
+# end

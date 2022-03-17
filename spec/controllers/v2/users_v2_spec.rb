@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe V2::UsersController, type: :controller do
+RSpec.describe Api::V2::UsersController, type: :controller do
   
   before { @users = create_list(:user, 3) }
   
