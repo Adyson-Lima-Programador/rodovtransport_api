@@ -5,8 +5,9 @@
     
     # GET /packages
     def index
-      @packages = Package.all
-      
+      page = (params[:page] || 1).to_i
+      per_page = (params[:per_page] || 10).to_i
+      @packages = Package.all.page(page).per(per_page)
       render json: @packages
     end
     
