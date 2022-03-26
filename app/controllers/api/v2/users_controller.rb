@@ -5,7 +5,10 @@
     
     # GET /users
     def index
-      @users = User.all
+      page = (params[:page] || 1).to_i
+      per_page = (params[:per_page] || 7).to_i
+      # Aceita requisições: localhost:3000/api/v2/users?page=10&per_page=10
+      @users = User.all.page(page).per(per_page)
       render json: @users
     end
     
