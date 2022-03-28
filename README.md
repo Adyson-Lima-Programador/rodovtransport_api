@@ -1,4 +1,4 @@
-# API REST "rodovtransport", desenvolvida em Ruby on Rails, com versionamento, e autenticação JWT. 
+# API REST "rodovtransport", desenvolvida em Ruby on Rails, com versionamento de recuros, e autenticação JWT. Com frontends <a href="https://github.com/Adyson-Lima-Programador/rodovtransport_web">Angular</a> e <a href="">Flutter</a>. 
 
 ## Imagem da documentação da API 
 <img src="https://github.com/Adyson-Lima-Programador/rodovtransport_api/blob/main/documentacao/imagem-doc-api.png" width="100%" height="100%"/>
