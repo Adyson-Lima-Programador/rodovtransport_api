@@ -28,6 +28,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v2 do
       resources :auths, only: [:create]
+      get 'users/:email', to: 'users#show_email'
       resources :users
       resources :packages
     end

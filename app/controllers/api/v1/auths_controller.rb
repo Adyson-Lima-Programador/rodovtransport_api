@@ -14,7 +14,7 @@
       token = JWT.encode payload, hmac_secret, 'HS256'
       
       # pesquisa se email vindo do frontend existe no banco de dados
-      @user = User.find_by(email: params[:email]) 
+      @user = User.find_by(email: params[:email])
       
       # só renderiza token se o usuário estiver cadastrado no banco de dados
       if(@user != nil)

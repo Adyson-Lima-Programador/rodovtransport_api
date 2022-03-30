@@ -17,6 +17,13 @@
       render json: @user
     end
     
+    # GET /users/email
+    def show_email
+      @user_email = User.find_by(email: params[:email]+"."+params[:format])
+      @user_packages = Package.where(user_id: @user_email.id)
+      render json: @user_packages
+    end
+    
     #POST /users
     def create
       @user = User.new(user_params)
@@ -48,7 +55,7 @@
       def set_user
         @user = User.find(params[:id])
       end
-  
+      
       # Only allow a list of trusted parameters through.
       def user_params
         params.require(:user).permit(:name, :email, :password, :category)
