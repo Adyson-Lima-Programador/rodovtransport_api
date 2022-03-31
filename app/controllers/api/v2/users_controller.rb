@@ -1,7 +1,7 @@
 #module V2
   class Api::V2::UsersController < ApplicationController
     
-    before_action :set_user, only: %i[ show update destroy ]
+    before_action :set_user, only: %i[ show show_email update destroy ]
     
     # GET /users
     def index
@@ -19,7 +19,7 @@
     
     # GET /users/email
     def show_email
-      @user_email = User.find_by(email: params[:email]+"."+params[:format])
+      # @user_email = User.find_by(email: params[:email]+"."+params[:format])
       @user_packages = Package.where(user_id: @user_email.id)
       render json: @user_packages
     end
@@ -53,7 +53,11 @@
   private
       # Use callbacks to share common setup or constraints between actions.
       def set_user
-        @user = User.find(params[:id])
+        if(params[:id] and !params[:email])
+          @user = User.find(params[:id])
+        else
+          @user_email = User.find_by(email: params[:email]+"."+params[:format])
+        end
       end
       
       # Only allow a list of trusted parameters through.
