@@ -1,36 +1,37 @@
 
-# default: &default
-#   adapter: sqlite3
-#   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-#   timeout: 5000
-
-# development:
-#   <<: *default
-#   database: db/development.sqlite3
-
-# test:
-#   <<: *default
-#   database: db/test.sqlite3
-
-# production:
-#   <<: *default
-#   database: db/production.sqlite3
-
-####################### Postgresql produção ################################################
 default: &default
-  adapter: postgresql
-  encoding: unicode
+  adapter: sqlite3
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
 
 development:
   <<: *default
-  database: rodovtransport_development
+  database: db/development.sqlite3
 
 test:
   <<: *default
-  database: rodovtransport_test
+  database: db/test.sqlite3
 
 production:
   <<: *default
-  database: rodovtransport_production
-  username: rodovtransport
-  password: <%= ENV["MYAPP_DATABASE_PASSWORD"] %>
+  database: db/production.sqlite3
+
+####################### Postgresql produção ################################################
+
+# default: &default
+#   adapter: postgresql
+#   encoding: unicode
+
+# development:
+#   <<: *default
+#   database: rodovtransport_development
+
+# test:
+#   <<: *default
+#   database: rodovtransport_test
+
+# production:
+#   <<: *default
+#   database: rodovtransport_production
+#   username: rodovtransport
+#   password: <%= ENV["MYAPP_DATABASE_PASSWORD"] %>
